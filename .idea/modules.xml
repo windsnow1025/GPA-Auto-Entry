@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/WES-iGPA-Auto-Entry.iml" filepath="$PROJECT_DIR$/.idea/WES-iGPA-Auto-Entry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GPA-Auto-Entry.iml" filepath="$PROJECT_DIR$/.idea/GPA-Auto-Entry.iml" />
     </modules>
   </component>
 </project>
