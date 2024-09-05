@@ -1,4 +1,6 @@
 from selenium import webdriver
+
+from src.scholaro_gpa import ScholaroGPA
 from src.wes_igpa import WESiGPA
 from excel_reader import read_excel_data
 
@@ -13,10 +15,11 @@ try:
     driver = webdriver.Chrome()  # Make sure chromedriver is in your PATH
 
     # Create an instance of WESiGPAScraper
-    wes_scraper = WESiGPA(driver)
+    # scraper = WESiGPA(driver)
+    scraper = ScholaroGPA(driver)
 
     # Add courses from the Excel data
-    wes_scraper.add_courses_from_data(course_data)
+    scraper.add_courses_from_data(course_data)
 
     # Keep the browser open for you to see the result
     input("Press Enter to close the browser...")

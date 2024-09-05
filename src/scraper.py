@@ -39,4 +39,11 @@ class Scraper:
     ):
         if element is None:
             element = self.driver
-        WebDriverWait(self.driver, timeout).until(staleness_of(element))
+        self._wait(timeout=timeout).until(staleness_of(element))
+
+    def _wait_for_condition(
+            self,
+            condition_function: Callable,
+            timeout: float = 2
+    ):
+        self._wait(timeout=timeout).until(condition_function)
