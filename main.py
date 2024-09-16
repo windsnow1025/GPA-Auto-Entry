@@ -12,8 +12,8 @@ try:
     driver = webdriver.Chrome()
 
     # Create an instance of WESiGPA / ScholaroGPA Scraper
-    # scraper = WESiGPA(driver)
-    scraper = ScholaroGPA(driver)
+    scraper = WESiGPA(driver)
+    # scraper = ScholaroGPA(driver)
 
     scraper.add_courses_from_data(course_data)
 
