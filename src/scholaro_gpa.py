@@ -1,6 +1,8 @@
-from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
+
 from src.scraper import Scraper
+
 
 class ScholaroGPA(Scraper):
     def __init__(self, driver: WebDriver):

@@ -1,8 +1,8 @@
 from selenium import webdriver
 
-from src.scholaro_gpa import ScholaroGPA
-from src.wes_igpa import WESiGPA
 from excel_reader import read_excel_data
+from src.wes_igpa import WESiGPA
+from src.scholaro_gpa import ScholaroGPA
 
 excel_file = 'data/sign_score.xlsx'  # Replace with your Excel file path
 
