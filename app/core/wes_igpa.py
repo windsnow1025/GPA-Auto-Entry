@@ -1,6 +1,6 @@
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from src.scraper import Scraper
+from app.core.scraper import Scraper
 
 
 class WESiGPA(Scraper):
@@ -41,11 +41,6 @@ class WESiGPA(Scraper):
         self._wait_find(self.add_course_button_path).click()
 
     def add_courses_from_data(self, data: list[dict]):
-        """
-        Adds multiple courses to the WES iGPA Calculator.
-        :param data: A list of dictionaries containing course data.
-        """
-
         print("Waiting for up to 2 minutes to allow manual setup...")
         self._wait_find(self.add_course_button_path, timeout=120)
 

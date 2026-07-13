@@ -33,13 +33,13 @@ Add New Interpreter >> Add Local Interpreter
      * `credit`: Course credits
      * `grade`: Course grade (using the WES iGPA grading scale)
 2. **Update the file path:**
-   * In `main.py`, modify the `excel_file` variable to point to your Excel file:
+   * In `app/main.py`, modify the `excel_file` variable to point to your Excel file:
      ```python
      excel_file = 'data/sign_score.xlsx'  # Replace with your Excel file path
      ```
 3. **Run the script:**
    ```bash
-   python main.py
+   python -m app.main
    ```
 
 ## Example Data (sign_score.xlsx)

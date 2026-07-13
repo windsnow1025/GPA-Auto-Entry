@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from src.scraper import Scraper
+from app.core.scraper import Scraper
 
 
 class ScholaroGPA(Scraper):
@@ -40,11 +40,6 @@ class ScholaroGPA(Scraper):
         grade_input.send_keys(grade)
 
     def add_courses_from_data(self, data: list[dict]):
-        """
-        Adds multiple courses to the Scholaro GPA Calculator.
-        :param data: A list of dictionaries containing course data.
-        """
-
         print("Waiting for up to 2 minutes to allow manual setup...")
         self._wait_for_condition(
             lambda driver: len(driver.find_elements(By.XPATH, f"{self.table_xpath}//tbody/tr")) > len(data) + 1,
